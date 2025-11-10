@@ -1,0 +1,54 @@
+.menu {
+  box-sizing: border-box;
+  background-color: $aside-bg-color;
+  height: 100vh;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  overflow: auto;
+
+  @include on-desktop {
+    font-weight: 700;
+  }
+
+  &__top {
+    margin-bottom: 24px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #e5e5e5;
+
+    @include on-tablet {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__phone-number {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $aside-link-color;
+    text-decoration: none;
+  }
+
+  &__call-to-book {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: $aside-link-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-bottom: 1px solid $aside-link-color;
+    width: fit-content;
+    padding-bottom: 8px;
+  }
+}
