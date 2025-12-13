@@ -29,3 +29,22 @@
     background-image: url(../images/icons/icon-close.png);
   }
 }
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__number {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0;
+
+    @include hover(opacity, $transition-transform-speed);
+  }
+
+  &:hover &__number {
+    opacity: 1;
+  }
+}
