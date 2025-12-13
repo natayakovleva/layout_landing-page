@@ -41,10 +41,14 @@
     letter-spacing: 2px;
     opacity: 0;
 
-    @include hover(opacity, $transition-transform-speed);
+    @include on-desktop {
+      @include hover(opacity, $transition-transform-speed);
+    }
   }
 
-  &:hover &__number {
-    opacity: 1;
+  @include on-desktop {
+    &:hover &__number {
+      opacity: 1;
+    }
   }
 }
